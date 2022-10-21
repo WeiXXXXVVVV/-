@@ -9,7 +9,7 @@ int main () {
     float c=0,d=0,f=0;
     while ((ch = getchar())!='\n'){
         if(ch>='0' && ch<='9'){
-            if(ch = '0'){                
+            if(ch == '0'){                
                b = 0;
                a= a+b;
             }
@@ -49,32 +49,43 @@ int main () {
                b = 9;
                 a= a+b;
             }
+            //printf("%d %d ",a,b);
         }
         else if(ch>='A' && ch<='F'){
-            if(ch = 'A'){                
-               d = b * A;
+            if(ch == 'A'){                
+               d = b * 4;
+               f= f+d;
+              // printf("d%f ",d);
             }
              else if(ch == 'B'){                
-               d = b * B;
+               d = b * 3;
+               f= f+d;
+              // printf("d%f ",d);
             }
              else if(ch == 'C'){                
-               d = b * C;
+               d = b * 2;
+               f= f+d;
+               //printf("d%f ",d);
             }
              else if(ch == 'F'){                
-               d = b * F;
+               d = 0;
+               f= f+d;
+               //printf("d%f ",d);
             }
             
         }
         else if(ch=='+'){
             d = 0.3 *b;
+            f= f+d;
         }
         else if(ch=='-'){
             d  = (-0.3)*b;
+            f= f+d;
         }
-        f= f+d;                         
+       // printf("f%f ",f);                         
     }
     c= f / a; 
-    printf("%d",a);
+    //printf("%d\n",a);
     printf("%.2f",c);
     return 0;
 }
